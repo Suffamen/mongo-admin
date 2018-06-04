@@ -1,0 +1,23 @@
+<ux-header>
+    <ux-header-group>
+        <ux-router-link [link]="'/home'">{{'Home' | translate}}</ux-router-link>
+        <ux-router-link [link]="'/lazy'">{{'Lazy' | translate}}</ux-router-link>
+    </ux-header-group>
+
+    <ux-header-group position="right">
+        <ux-localization></ux-localization>
+    </ux-header-group>
+</ux-header>
+
+<nav class="nav">
+    <a class="nav__link" routerLink="/home" routerLinkActive="_active"></a>
+    <a class="nav__link" routerLink="/lazy" routerLinkActive="_active"></a>                    
+</nav>
+
+
+
+
+<main class="main" [@routerTransition]="getState(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+</main>
+
