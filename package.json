@@ -1,6 +1,6 @@
 {
-    "name": "project-template-a6",
-    "version": "1.0.0",
+    "name": "mongo-admin",
+    "version": "0.0.1",
     "scripts": {
         "ng": "ng",
         "start": "gulp svg && ng serve --open",

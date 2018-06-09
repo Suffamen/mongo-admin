@@ -13,6 +13,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {UxHammerPluginPatch} from "./services/hammer-plugin-a6.patch";
+import {MaConnectionsModule} from "./modules/connections/connections.module";
 
 
 export class MyHammerConfig extends HammerGestureConfig  {
@@ -53,7 +54,8 @@ export function createTranslateLoader(http: HttpClient) {
                 useFactory: (createTranslateLoader),
                 deps: [HttpClient]
             }
-        })
+        }),
+        MaConnectionsModule
     ],
     bootstrap: [
         AppComponent

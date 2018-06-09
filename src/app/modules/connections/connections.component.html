@@ -1,0 +1,67 @@
+<div class="ma-connections">
+    <h2 class="ma-connections__title">MongoDB connections</h2>
+    <div class="ma-connections__list">
+        <div class="ma-connections__item"
+             *ngFor="let connection of _connections">
+            <div class="ma-connections__item-field">
+                <ux-label [text]="'Connection name'">
+                    <ux-text-field [(value)]="connection.name">
+                    </ux-text-field>
+                </ux-label>
+            </div>
+            <div class="ma-connections__item-field">
+                <ux-label [text]="'Connection string'">
+                    <ux-text-field [(value)]="connection.connectionString">
+                    </ux-text-field>
+                </ux-label>
+            </div>
+            <div class="ma-connections__item-field">
+                <ux-label [text]="'Options'">
+                    <ux-ace-editor [(value)]="connection.options"
+                                   [mode]="'json'"
+                                   [theme]="'eclipse'">
+                    </ux-ace-editor>
+                </ux-label>
+            </div>
+            <div class="ma-connections__item-field">
+                <ux-multiple-button [text]="'Actions'">
+                    <ux-multiple-button-item text="Connect">
+                    </ux-multiple-button-item>
+                    <ux-multiple-button-item text="Update">
+                    </ux-multiple-button-item>
+                    <ux-multiple-button-item text="Delete">
+                    </ux-multiple-button-item>
+                </ux-multiple-button>
+            </div>
+        </div>
+
+        <div class="ma-connections__item">
+            <div class="ma-connections__item-field">
+                <ux-label [text]="'Connection name'">
+                    <ux-text-field [(value)]="_newConnection.name">
+                    </ux-text-field>
+                </ux-label>
+            </div>
+            <div class="ma-connections__item-field">
+                <ux-label [text]="'Connection string'">
+                    <ux-text-field [(value)]="_newConnection.connectionString">
+                    </ux-text-field>
+                </ux-label>
+            </div>
+            <div class="ma-connections__item-field">
+                <ux-label [text]="'Options'">
+                    <ux-ace-editor [(value)]="_newConnection.options"
+                                   [theme]="'eclipse'"
+                                   [mode]="'json'">
+                    </ux-ace-editor>
+                </ux-label>
+            </div>
+            <div class="ma-connections__item-field">
+                <ux-button [text]="'Add connection'"
+                           [type]="'button'"
+                           [kind]="'primary'">
+                </ux-button>
+            </div>
+        </div>
+    </div>
+</div>

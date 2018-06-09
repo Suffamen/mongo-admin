@@ -1,0 +1,13 @@
+<div style="width: 10%">
+    <ux-label [text]="'Database objects'">
+        <ux-tree-menu [items]="_currentConnectionMenuItems"
+                      [itemCaptionKey]="'caption'">
+        </ux-tree-menu>
+    </ux-label>
+
+    <ux-label [text]="'Connections'">
+        <ux-tree-menu [items]="_connectionsMenuItems"
+                      [itemCaptionKey]="'caption'">
+        </ux-tree-menu>
+    </ux-label>
+</div>
